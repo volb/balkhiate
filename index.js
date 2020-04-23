@@ -1,17 +1,18 @@
 require('dotenv').config()
 const fetch = require('node-fetch');
 
-const base_url = "https://www.stands4.com/services/v2/poetry.php";
-const api_uid = "?uid=" + process.env.STANDS4_API_UID;
-const api_token = "&tokenid=" + process.env.STANDS4_API_TOKEN;
-const full_base_url = base_url + api_uid + api_token;
-let term_query = "&term=";
-let data_format = "&format=json";
+const baseUrl = "https://www.stands4.com/services/v2/poetry.php";
+const apiUid = "?uid=" + process.env.STANDS4_API_UID;
+const apiToken = "&tokenid=" + process.env.STANDS4_API_TOKEN;
+const fullBaseUrl = baseUrl + apiUid + apiToken;
+let termQuery = "&term=";
+let dataFormat = "&format=json";
 
-exports.scrapePoem = function(query) {
-    fetch(full_base_url + term_query + query + data_format)
-    .then( r => r.json() )
-    .then( data => console.log(data) )
+exports.scrapePoem = async function(query) {
+    let response = await fetch(fullBaseUrl+termQuery+query+dataFormat);
+    let data = await response.json();
+    console.log(data);
+    return data;
 }
 
 exports.translate = function () {
