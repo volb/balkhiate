@@ -11,10 +11,5 @@ let dataFormat = "&format=json";
 exports.scrapePoem = async function(query) {
     let response = await fetch(fullBaseUrl+termQuery+query+dataFormat);
     let data = await response.json();
-    console.log(data);
     return data;
-}
-
-exports.translate = function () {
-    console.log("translation not implemented");
 }
