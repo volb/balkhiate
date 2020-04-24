@@ -1,6 +1,6 @@
 {
   "name": "balkhiate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "poetry translator and scraper",
   "files": [
     "index.js"
@@ -12,9 +12,9 @@
   "author": "volb",
   "license": "ISC",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/volb/balkhiate.git"
-  },  
+    "type": "git",
+    "url": "https://github.com/volb/balkhiate.git"
+  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "node-fetch": "^2.6.0"
