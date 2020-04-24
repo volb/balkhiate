@@ -1,7 +1,7 @@
 {
   "name": "balkhiate",
   "version": "1.0.1",
-  "description": "poetry translator and scraper",
+  "description": "poetry scraper",
   "files": [
     "index.js"
   ],
